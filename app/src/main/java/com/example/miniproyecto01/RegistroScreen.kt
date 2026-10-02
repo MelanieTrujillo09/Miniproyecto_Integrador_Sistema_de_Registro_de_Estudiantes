@@ -146,5 +146,18 @@ fun RegistroScreen(onNavigateToDetalle: (String, String, String, String, Boolean
         ) {
             Text("Registrar y Ver Detalle")
         }
+        OutlinedButton(
+            onClick = {
+                preferencesManager.clear()
+                matricula = ""
+                nombre = ""
+                carrera = "Seleccionar Carrera"
+                turno = "Matutino"
+                activo = true
+            },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Limpiar formulario")
+        }
     }
 }

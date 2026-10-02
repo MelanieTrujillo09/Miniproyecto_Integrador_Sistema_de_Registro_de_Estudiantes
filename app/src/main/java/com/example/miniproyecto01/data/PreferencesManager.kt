@@ -32,4 +32,6 @@ class PreferencesManager(context: Context) {
     fun getLastCarrera(): String = sharedPreferences.getString(KEY_CARRERA, "") ?: ""
     fun getLastTurno(): String = sharedPreferences.getString(KEY_TURNO, "Matutino") ?: "Matutino"
     fun getLastEstatus(): Boolean = sharedPreferences.getBoolean(KEY_ESTATUS, true)
+    fun clear() {
+        sharedPreferences.edit().clear().apply()}
 }
